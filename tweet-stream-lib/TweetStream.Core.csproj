@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>TweetStream</RootNamespace>
+    <RootNamespace>TweetStream.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

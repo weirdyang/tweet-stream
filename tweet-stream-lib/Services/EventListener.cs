@@ -12,10 +12,10 @@ using Tweetinvi.Models.V2;
 using Tweetinvi.Parameters.V2;
 using Tweetinvi.Streaming.V2;
 using Tweetinvi.Streams;
-using TweetStream.Abstractions;
-using TweetStream.Configuration;
+using TweetStream.Core.Abstractions;
+using TweetStream.Core.Configuration;
 
-namespace TweetStream.Services
+namespace TweetStream.Core.Services
 {
     public class EventListener : BackgroundService
     {

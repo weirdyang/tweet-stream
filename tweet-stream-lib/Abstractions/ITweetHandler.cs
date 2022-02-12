@@ -4,13 +4,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Tweetinvi.Events.V2;
 
-namespace TweetStream.Abstractions
+namespace TweetStream.Core.Abstractions
 {
     public interface ITweetHandler
     {
         bool CanHandle(FilteredStreamTweetV2EventArgs item);
 
-        Task HandleAsync(FilteredStreamTweetV2EventArgs item);
+        ValueTask HandleAsync(FilteredStreamTweetV2EventArgs item);
 
 
     }

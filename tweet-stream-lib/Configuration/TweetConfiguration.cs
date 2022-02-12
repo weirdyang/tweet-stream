@@ -10,7 +10,7 @@ using Tweetinvi.Models;
 using Tweetinvi.Models.V2;
 using Tweetinvi.Parameters.V2;
 
-namespace TweetStream.Configuration
+namespace TweetStream.Core.Configuration
 {
     public class Settings
     {

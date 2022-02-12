@@ -1,6 +1,6 @@
 using System;
 
-namespace tweet_stream
+namespace TweetStream.Web
 {
     public class WeatherForecast
     {

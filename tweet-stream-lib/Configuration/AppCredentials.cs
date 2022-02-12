@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TweetStream.Configuration
+namespace TweetStream.Core.Configuration
 {
     public class AppCredentials
     {   // api key a9IL6cV20YPrZXSVD4o8VCMH0

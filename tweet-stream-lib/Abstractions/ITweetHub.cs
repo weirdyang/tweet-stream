@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TweetStream.Abstractions
+namespace TweetStream.Core.Abstractions
 {
     class ITweetHub
     {

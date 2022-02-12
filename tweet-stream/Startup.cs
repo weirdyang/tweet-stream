@@ -12,11 +12,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tweetinvi.Events.V2;
-using TweetStream.Abstractions;
-using TweetStream.Configuration;
-using TweetStream.Handlers;
+using TweetStream.Core.Abstractions;
+using TweetStream.Core.Configuration;
+using TweetStream.Core.Handlers;
+using TweetStream.Core.Services;
 
-namespace tweet_stream
+namespace TweetStream.Web
 {
     public class Startup
     {
@@ -37,15 +38,15 @@ namespace tweet_stream
             services.Configure<Settings>(Configuration.GetSection(nameof(Settings)));
             services.AddSingleton<TweetConfiguration>();
 
-            services.AddHostedService<TweetStream.Services.EventListener>();
+            services.AddHostedService<EventListener>();
 
-            services.AddSingleton<ITweetQueue<FilteredStreamTweetV2EventArgs>, TweetStream.Services.EventQueue>();
+            services.AddSingleton<ITweetQueue<FilteredStreamTweetV2EventArgs>, EventQueue>();
 
             services.AddTransient<ITweetHandler, FollowerQuotaHandler>();
-            services.AddHostedService<TweetStream.Services.TweetWorker>();
+            services.AddHostedService<TweetWorker>();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "tweet_stream", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TweetStream.Web", Version = "v1" });
             });
         }
 
@@ -56,7 +57,7 @@ namespace tweet_stream
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "tweet_stream v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TweetStream.Web v1"));
             }
 
             app.UseHttpsRedirection();

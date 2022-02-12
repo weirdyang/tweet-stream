@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi.Models.V2;
 
-namespace TweetStream.Abstractions
+namespace TweetStream.Core.Abstractions
 {
     public interface ITweetQueue<T>
     {

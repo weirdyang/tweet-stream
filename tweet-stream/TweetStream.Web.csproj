@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>tweet_stream</RootNamespace>
+    <RootNamespace>TweetStream.Web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tweet-stream-lib\tweet-stream-lib.csproj" />
+    <ProjectReference Include="..\tweet-stream-lib\TweetStream.Core.csproj" />
   </ItemGroup>
 
 </Project>

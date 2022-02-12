@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Tweetinvi.Events.V2;
-using TweetStream.Abstractions;
+using TweetStream.Core.Abstractions;
 using System.Linq;
-namespace TweetStream.Services
+namespace TweetStream.Core.Services
 {
     public class TweetWorker : BackgroundService, ITweetWorker
     {

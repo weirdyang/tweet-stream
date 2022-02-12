@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TweetStream
+namespace TweetStream.Core
 {
     public class Class1
     {

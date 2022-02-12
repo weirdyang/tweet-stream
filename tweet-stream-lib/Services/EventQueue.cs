@@ -6,9 +6,9 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using Tweetinvi.Events.V2;
 using Tweetinvi.Models.V2;
-using TweetStream.Abstractions;
+using TweetStream.Core.Abstractions;
 
-namespace TweetStream.Services
+namespace TweetStream.Core.Services
 {
     public class EventQueue: ITweetQueue<FilteredStreamTweetV2EventArgs>
     {

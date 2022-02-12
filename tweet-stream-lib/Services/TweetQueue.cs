@@ -5,9 +5,9 @@ using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 using Tweetinvi.Models.V2;
-using TweetStream.Abstractions;
+using TweetStream.Core.Abstractions;
 
-namespace TweetStream.Services
+namespace TweetStream.Core.Services
 {
     public class TweetQueue: ITweetQueue<TweetV2>
     {

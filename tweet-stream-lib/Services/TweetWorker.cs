@@ -43,10 +43,12 @@ namespace TweetStream.Core.Services
                 if(_tweetQueue.GetCount() != 0)
                 {
                     var task = await _tweetQueue.DequeueAsync(stoppingToken);
-                    var handler = _handlers.FirstOrDefault(x => x.CanHandle(task));
-                    if (handler != null)
+                    foreach (var handler in _handlers)
                     {
-                        await handler.HandleAsync(task);
+                        if (handler.CanHandle(task))
+                        {
+                            await handler.HandleAsync(task);
+                        }
                     }
                     
                 }
